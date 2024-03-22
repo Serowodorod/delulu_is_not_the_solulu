@@ -73,9 +73,31 @@ width: 500px;
 
 @media(max-width: 426px) {
 
+.racoon{
+
+	width: 250px;
+    margin-left: 15%;
+}
+}
+.SOLULU{
+    margin-left: 10%;
+
+
+}
+	.app {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+	.links{
+
+		margin-left: 15%;
+	}
+
 
 P{font-size: 15px;}
-
 
 
 .hvr-bounce-to-left{
@@ -86,10 +108,15 @@ font-size: 15px;
 
 }
 
-
 .logo{
 
 	width: 400px;
+}
+.hidden-menu a {
+    padding: 10px 10px 10px 30px;
+    color: #fff;
+    font-size: 11px!important;
+    display: block;
 }
 
 
@@ -97,7 +124,18 @@ font-size: 15px;
 
 @media(max-width: 376px) {
 
+.hidden-menu a {
+    padding: 2px 0px 0px 21px!important;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+}
 
+ul li {
+    list-style: none;
+    margin: 0px 10px!important;
+    transition: 0.5s;
+}
 
 
 #ROAD{

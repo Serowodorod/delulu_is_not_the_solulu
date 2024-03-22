@@ -90,17 +90,18 @@
 }
 
 .hidden-menu {
-  position: fixed;
-  right: 0;
-  top: 50px;
-  min-width: 250px;
-  padding: 10px 0;
-  background: red;
-  transition: 0.4s;
-  border-radius: 25px;
-  transform: translateX(100%);
+    position: fixed;
+    right: 0;
+    top: 50px;
+    min-width: 250px;
+    padding: 10px 0;
+    background: red;
+    transition: 0.4s;
+    border-radius: 25px;
+    transform: translateX(100%);
+    z-index: 4;
+    opacity: 0.8;
 }
-
 .hidden-menu.active {
   transform: translateX(0);
 }
@@ -750,7 +751,7 @@ section {
 
 
 
- <nav class="nav">
+ <nav class="nav" id="back">
     <ul class="visible-menu">
       <li><a href="#ABOUT">ABOUT</a></li>
       <li><a href="#HOW">HOW TO BUY</a></li>
@@ -820,7 +821,7 @@ section {
 
     
 
- <img class="swing" style="width:200px; ;" src="face.png"   > 
+ <img class="swing" style="width:200px;    margin-left: 25%;  " src="face.png"   > 
  </div>
 </div>
 
@@ -835,7 +836,7 @@ section {
     <div class="col-md-6 ">
 
 
-      <ul>
+      <ul class="links">
         <li><a class="hvr-grow"  href="https://twitter.com/Ferret_AiOnSol"><img src="./nw/1.png"></a> </li>
         <li><a class="hvr-grow" href="https://t.me/FerretAiOnSolana"><img src="./nw/2.png"></a></li>
         <li><a class="hvr-grow" href=""><img src="./nw/3.png"></a></li>
@@ -849,7 +850,7 @@ section {
   </div>
   <div class="col-md-6 ">
 
-  <h2 style="font-size: 25px;">CA:XXXXXXXXXX</h2>
+  <h2 style="font-size: 25px;  margin-left: 25%; ">CA:XXXXXXXXXX</h2>
   </div>
 </div>
 </div>
@@ -931,7 +932,7 @@ section {
   <div class="row mt-5"> 
     <div class="col-md-6">
       
-       <img src="SOLULU.gif" style="height: 350px; width: 310px; border-radius: 25px;">
+       <img class="SOLULU" src="SOLULU.gif" style="height: 350px; width: 310px; border-radius: 25px;">
     </div>
     
    <div class="col-md-6">
@@ -1064,7 +1065,7 @@ Switch SOL for $SOLULU. We have low taxes so you don’t need to worry about buy
     </div>
 
     <div  class="col-md-6 section section3"  >
-      <img id="knight"   style="width: 310px;" src="racoon.png">
+      <img id="knight"  class="racoon"  style="width: 310px;" src="racoon.png">
        
 
     
@@ -1096,7 +1097,7 @@ Switch SOL for $SOLULU. We have low taxes so you don’t need to worry about buy
   
     
     <div  class="col-md-4 section section3"  >
-       <img  style=" width:250px;" src="racoon1.png"> 
+       <img class="racoon"  style=" width:250px; " src="racoon1.png"> 
 
      </div>
 
@@ -1106,12 +1107,12 @@ Switch SOL for $SOLULU. We have low taxes so you don’t need to worry about buy
 
 <p>Phase 2: Vibe and HODL</p>
 
-<p>Phase 3: SOLULU Takeover</p> 
+
 </div>
  </div>
        
     <div  class="col-md-4 section section3"  >
-       <img style="width:250px; " src="racoon1.png"> 
+       <img class="racoon" style="width:250px; " src="racoon1.png"> 
        
        
 
@@ -1126,7 +1127,7 @@ Switch SOL for $SOLULU. We have low taxes so you don’t need to worry about buy
 
   
     
-    <div  class="col-md-4 section section3"  >
+    <div  class="col-md-6 section section3"  >
       <div style="text-align:center; border: 8px solid 131313;
   border-radius: 30px;background-color: #131313; " > <p>Phase 1
 Launch
@@ -1154,7 +1155,7 @@ Launch
 
 
 
-        <div  class="col-md-4 section section3"  >
+        <div  class="col-md-6 section section3"  >
       <div style="text-align:center; border: 8px solid 131313;
   border-radius: 30px;background-color: #131313;" > <p>Phase 2
 - Release TG Bot Utility
@@ -1175,29 +1176,8 @@ Launch
     
     </div>
 
-  </div>
-      <div  class="col-md-4 section section3"  >
-      <div style="text-align:center; border: 8px solid 131313;
-  border-radius: 30px;background-color: #131313;" > <p>Phase 3
-- Massive Marketing Push
 
-- Push TikTok + Reddit Ads
 
-- Develop E-Commerce Business
-
-- Introduce Rev Share Model
-
-- On Board TikTok Influencers
-
-- Release 2nd Utility
-
-- Plan Next 3 Roadmap Phases<p> 
-       
-
-    
-    </div>
-
-  </div>
 
   </div>
 
@@ -1233,7 +1213,7 @@ Launch
       <li class="list-inline-item" style="color: white;"><a class="hvr-grow" href="#back"><img src="./nw/5.png">   </a></li>
   
    
-   <a id="scrolltop" href="#back">^</a>
+   
 
     </ul>
 </div>
@@ -1331,6 +1311,23 @@ burger.addEventListener('click', function () {
 
 window.addEventListener('resize', updateNav);
 document.addEventListener('DOMContentLoaded', updateNav);
+
+
+
+var tempScrollTop = 0, 
+currentScrollTop = 0;
+
+$(window).on('scroll', 
+    function() {        
+        currentScrollTop = $(window).scrollTop();        
+        if (tempScrollTop < currentScrollTop )        
+            $('.hidden-menu').fadeOut();
+
+        else 
+            if (tempScrollTop > currentScrollTop )            
+                $('.hidden-menu').fadeIn();                                   
+            tempScrollTop = currentScrollTop;  
+    })
 
 
 
