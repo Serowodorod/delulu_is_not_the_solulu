@@ -1,0 +1,116 @@
+@media(max-width: 768px) {
+
+#knight {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+h2 {
+    font-size: 45px;
+}
+
+
+
+
+
+
+
+
+}
+
+@media(max-width: 375px) {
+
+h2{
+font-size: 45px;
+
+}
+
+
+}
+
+
+
+
+@media(max-width: 1199px) {
+
+
+
+	#CA{
+padding-left: 10rem;
+
+
+
+	}
+}
+
+video{
+
+height: 500px;
+width: 500px;
+
+
+
+
+}
+
+
+
+@media(max-width: 426px) {
+
+
+P{font-size: 15px;}
+
+
+
+.hvr-bounce-to-left{
+
+background-color:#131313;
+border-radius: 30px 30px;
+font-size: 15px;
+
+}
+
+
+.logo{
+
+	width: 400px;
+}
+
+
+}
+
+@media(max-width: 376px) {
+
+
+
+
+#ROAD{
+
+font-size: 50px;
+
+
+}
+#CON{
+font-size: 50px;
+
+}
+
+
+}
+
